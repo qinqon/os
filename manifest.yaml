@@ -41,6 +41,7 @@ repos:
   - rhel-8-appstream
   - rhel-8-fast-datapath
   - rhel-8-server-ose
+  - epel-8-nmstate-git
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=1938928
 rpmdb: bdb
@@ -275,6 +276,7 @@ exclude-packages:
   # See: https://bugzilla.redhat.com/show_bug.cgi?id=1930468
   # See: https://bugzilla.redhat.com/show_bug.cgi?id=1800901
   - dhcp-client
+  - NetworkManager-config-server
 
 # Try to maintain this list ordering by "in RHEL, then not in RHEL".
 # To verify, disable all repos except the ootpa ones and then comment
@@ -345,6 +347,7 @@ packages:
  - conntrack-tools
  # Upstream PR https://github.com/coreos/fedora-coreos-config/pull/786
  - WALinuxAgent-udev
+ - nmstate
 
 repo-packages:
   # we always want the kernel from BaseOS
